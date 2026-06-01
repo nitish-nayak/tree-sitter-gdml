@@ -94,6 +94,44 @@
     ]
   },
   {
+    "type": "AL",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ALref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "AttDef",
     "named": true,
     "fields": {},
@@ -204,6 +242,25 @@
     "fields": {}
   },
   {
+    "type": "D",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "DefaultDecl",
     "named": true,
     "fields": {},
@@ -223,6 +280,25 @@
     }
   },
   {
+    "type": "Dref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "ETag",
     "named": true,
     "fields": {},
@@ -232,10 +308,6 @@
       "types": [
         {
           "type": "Name",
-          "named": true
-        },
-        {
-          "type": "world",
           "named": true
         }
       ]
@@ -255,10 +327,6 @@
         },
         {
           "type": "Name",
-          "named": true
-        },
-        {
-          "type": "world",
           "named": true
         }
       ]
@@ -365,6 +433,44 @@
     }
   },
   {
+    "type": "MEE",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "MEEref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "Mixed",
     "named": true,
     "fields": {},
@@ -449,6 +555,25 @@
     }
   },
   {
+    "type": "P",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "PEDecl",
     "named": true,
     "fields": {},
@@ -496,6 +621,25 @@
       "types": [
         {
           "type": "PITarget",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "Pref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
           "named": true
         }
       ]
@@ -561,6 +705,44 @@
     }
   },
   {
+    "type": "RL",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "RLref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "STag",
     "named": true,
     "fields": {},
@@ -574,10 +756,6 @@
         },
         {
           "type": "Name",
-          "named": true
-        },
-        {
-          "type": "world",
           "named": true
         }
       ]
@@ -619,6 +797,44 @@
     }
   },
   {
+    "type": "T",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "Tref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "XMLDecl",
     "named": true,
     "fields": {},
@@ -653,6 +869,120 @@
     }
   },
   {
+    "type": "arb8",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assembly",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "atom",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "auxiliary",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "bordersurface",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "box",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "children",
     "named": true,
     "fields": {},
@@ -666,6 +996,63 @@
         },
         {
           "type": "PEReference",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "composite",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cone",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "constant",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
           "named": true
         }
       ]
@@ -724,6 +1111,101 @@
         },
         {
           "type": "children",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cutTube",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "define",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "direction",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "directionref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "divisionvol",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
           "named": true
         }
       ]
@@ -800,6 +1282,25 @@
     }
   },
   {
+    "type": "elcone",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "element",
     "named": true,
     "fields": {},
@@ -807,6 +1308,22 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "AL",
+          "named": true
+        },
+        {
+          "type": "ALref",
+          "named": true
+        },
+        {
+          "type": "D",
+          "named": true
+        },
+        {
+          "type": "Dref",
+          "named": true
+        },
         {
           "type": "ETag",
           "named": true
@@ -816,11 +1333,427 @@
           "named": true
         },
         {
+          "type": "MEE",
+          "named": true
+        },
+        {
+          "type": "MEEref",
+          "named": true
+        },
+        {
+          "type": "P",
+          "named": true
+        },
+        {
+          "type": "Pref",
+          "named": true
+        },
+        {
+          "type": "RL",
+          "named": true
+        },
+        {
+          "type": "RLref",
+          "named": true
+        },
+        {
           "type": "STag",
           "named": true
         },
         {
+          "type": "T",
+          "named": true
+        },
+        {
+          "type": "Tref",
+          "named": true
+        },
+        {
+          "type": "arb8",
+          "named": true
+        },
+        {
+          "type": "assembly",
+          "named": true
+        },
+        {
+          "type": "atom",
+          "named": true
+        },
+        {
+          "type": "auxiliary",
+          "named": true
+        },
+        {
+          "type": "bordersurface",
+          "named": true
+        },
+        {
+          "type": "box",
+          "named": true
+        },
+        {
+          "type": "composite",
+          "named": true
+        },
+        {
+          "type": "cone",
+          "named": true
+        },
+        {
+          "type": "constant",
+          "named": true
+        },
+        {
           "type": "content",
+          "named": true
+        },
+        {
+          "type": "cutTube",
+          "named": true
+        },
+        {
+          "type": "define",
+          "named": true
+        },
+        {
+          "type": "direction",
+          "named": true
+        },
+        {
+          "type": "directionref",
+          "named": true
+        },
+        {
+          "type": "divisionvol",
+          "named": true
+        },
+        {
+          "type": "elcone",
+          "named": true
+        },
+        {
+          "type": "ellipsoid",
+          "named": true
+        },
+        {
+          "type": "eltube",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "file",
+          "named": true
+        },
+        {
+          "type": "first",
+          "named": true
+        },
+        {
+          "type": "firstposition",
+          "named": true
+        },
+        {
+          "type": "firstpositionref",
+          "named": true
+        },
+        {
+          "type": "firstrotation",
+          "named": true
+        },
+        {
+          "type": "firstrotationref",
+          "named": true
+        },
+        {
+          "type": "fraction",
+          "named": true
+        },
+        {
+          "type": "gdml",
+          "named": true
+        },
+        {
+          "type": "gdml_element",
+          "named": true
+        },
+        {
+          "type": "genericPolycone",
+          "named": true
+        },
+        {
+          "type": "genericPolyhedra",
+          "named": true
+        },
+        {
+          "type": "hype",
+          "named": true
+        },
+        {
+          "type": "intersection",
+          "named": true
+        },
+        {
+          "type": "isotope",
+          "named": true
+        },
+        {
+          "type": "loop",
+          "named": true
+        },
+        {
+          "type": "material",
+          "named": true
+        },
+        {
+          "type": "materialref",
+          "named": true
+        },
+        {
+          "type": "materials",
+          "named": true
+        },
+        {
+          "type": "matrix",
+          "named": true
+        },
+        {
+          "type": "multiUnion",
+          "named": true
+        },
+        {
+          "type": "multiUnionNode",
+          "named": true
+        },
+        {
+          "type": "offset",
+          "named": true
+        },
+        {
+          "type": "opticalsurface",
+          "named": true
+        },
+        {
+          "type": "orb",
+          "named": true
+        },
+        {
+          "type": "para",
+          "named": true
+        },
+        {
+          "type": "paraboloid",
+          "named": true
+        },
+        {
+          "type": "parameterised_position_size",
+          "named": true
+        },
+        {
+          "type": "parameters",
+          "named": true
+        },
+        {
+          "type": "paramvol",
+          "named": true
+        },
+        {
+          "type": "physvol",
+          "named": true
+        },
+        {
+          "type": "physvolref",
+          "named": true
+        },
+        {
+          "type": "polycone",
+          "named": true
+        },
+        {
+          "type": "polyhedra",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "positionref",
+          "named": true
+        },
+        {
+          "type": "property",
+          "named": true
+        },
+        {
+          "type": "quadrangular",
+          "named": true
+        },
+        {
+          "type": "quantity",
+          "named": true
+        },
+        {
+          "type": "reflectedSolid",
+          "named": true
+        },
+        {
+          "type": "replicate_along_axis",
+          "named": true
+        },
+        {
+          "type": "replicavol",
+          "named": true
+        },
+        {
+          "type": "rotation",
+          "named": true
+        },
+        {
+          "type": "rotationref",
+          "named": true
+        },
+        {
+          "type": "rzpoint",
+          "named": true
+        },
+        {
+          "type": "scale",
+          "named": true
+        },
+        {
+          "type": "scaledSolid",
+          "named": true
+        },
+        {
+          "type": "scaleref",
+          "named": true
+        },
+        {
+          "type": "second",
+          "named": true
+        },
+        {
+          "type": "section",
+          "named": true
+        },
+        {
+          "type": "setup",
+          "named": true
+        },
+        {
+          "type": "skinsurface",
+          "named": true
+        },
+        {
+          "type": "solid",
+          "named": true
+        },
+        {
+          "type": "solidref",
+          "named": true
+        },
+        {
+          "type": "solids",
+          "named": true
+        },
+        {
+          "type": "sphere",
+          "named": true
+        },
+        {
+          "type": "structure",
+          "named": true
+        },
+        {
+          "type": "subtraction",
+          "named": true
+        },
+        {
+          "type": "tessellated",
+          "named": true
+        },
+        {
+          "type": "tet",
+          "named": true
+        },
+        {
+          "type": "torus",
+          "named": true
+        },
+        {
+          "type": "trap",
+          "named": true
+        },
+        {
+          "type": "trd",
+          "named": true
+        },
+        {
+          "type": "triangular",
+          "named": true
+        },
+        {
+          "type": "tube",
+          "named": true
+        },
+        {
+          "type": "twistedbox",
+          "named": true
+        },
+        {
+          "type": "twistedtrap",
+          "named": true
+        },
+        {
+          "type": "twistedtrd",
+          "named": true
+        },
+        {
+          "type": "twistedtubs",
+          "named": true
+        },
+        {
+          "type": "twoDimVertex",
+          "named": true
+        },
+        {
+          "type": "union",
+          "named": true
+        },
+        {
+          "type": "userinfo",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        },
+        {
+          "type": "volume",
+          "named": true
+        },
+        {
+          "type": "volumeref",
+          "named": true
+        },
+        {
+          "type": "width",
+          "named": true
+        },
+        {
+          "type": "world",
+          "named": true
+        },
+        {
+          "type": "xtru",
+          "named": true
+        },
+        {
+          "type": "zplane",
           "named": true
         }
       ]
@@ -844,6 +1777,728 @@
         },
         {
           "type": "contentspec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ellipsoid",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "eltube",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "first",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "firstposition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "firstpositionref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "firstrotation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "firstrotationref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fraction",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "gdml",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "gdml_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "genericPolycone",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "genericPolyhedra",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "hype",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "intersection",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "isotope",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "loop",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "material",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "materialref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "materials",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "matrix",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "multiUnion",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "multiUnionNode",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "offset",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "opticalsurface",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "orb",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "para",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "paraboloid",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "parameterised_position_size",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "parameters",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "paramvol",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "physvol",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "physvolref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "polycone",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "polyhedra",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "position",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "positionref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
           "named": true
         }
       ]
@@ -879,6 +2534,823 @@
         },
         {
           "type": "doctypedecl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "property",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "quadrangular",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "quantity",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reflectedSolid",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "replicate_along_axis",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "replicavol",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rotation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rotationref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rzpoint",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scale",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scaledSolid",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scaleref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "second",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "setup",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "skinsurface",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "solid",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "solidref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "solids",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sphere",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "structure",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subtraction",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tessellated",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tet",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "torus",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "trap",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "trd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "triangular",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tube",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "twistedbox",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "twistedtrap",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "twistedtrd",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "twistedtubs",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "twoDimVertex",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "union",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "userinfo",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variable",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "volume",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "volumeref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "width",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "world",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "xtru",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "zplane",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
           "named": true
         }
       ]
@@ -989,6 +3461,14 @@
     "named": false
   },
   {
+    "type": "AL",
+    "named": false
+  },
+  {
+    "type": "ALref",
+    "named": false
+  },
+  {
     "type": "ANY",
     "named": false
   },
@@ -1013,7 +3493,15 @@
     "named": true
   },
   {
+    "type": "D",
+    "named": false
+  },
+  {
     "type": "DOCTYPE",
+    "named": false
+  },
+  {
+    "type": "Dref",
     "named": false
   },
   {
@@ -1033,6 +3521,14 @@
     "named": true
   },
   {
+    "type": "MEE",
+    "named": false
+  },
+  {
+    "type": "MEEref",
+    "named": false
+  },
+  {
     "type": "NDATA",
     "named": false
   },
@@ -1049,6 +3545,10 @@
     "named": true
   },
   {
+    "type": "P",
+    "named": false
+  },
+  {
     "type": "PITarget",
     "named": true
   },
@@ -1057,12 +3557,32 @@
     "named": false
   },
   {
+    "type": "Pref",
+    "named": false
+  },
+  {
+    "type": "RL",
+    "named": false
+  },
+  {
+    "type": "RLref",
+    "named": false
+  },
+  {
     "type": "SYSTEM",
+    "named": false
+  },
+  {
+    "type": "T",
     "named": false
   },
   {
     "type": "TokenizedType",
     "named": true
+  },
+  {
+    "type": "Tref",
+    "named": false
   },
   {
     "type": "URI",
@@ -1085,7 +3605,163 @@
     "named": false
   },
   {
+    "type": "arb8",
+    "named": false
+  },
+  {
+    "type": "assembly",
+    "named": false
+  },
+  {
+    "type": "atom",
+    "named": false
+  },
+  {
+    "type": "auxiliary",
+    "named": false
+  },
+  {
+    "type": "bordersurface",
+    "named": false
+  },
+  {
+    "type": "box",
+    "named": false
+  },
+  {
+    "type": "composite",
+    "named": false
+  },
+  {
+    "type": "cone",
+    "named": false
+  },
+  {
+    "type": "constant",
+    "named": false
+  },
+  {
+    "type": "cutTube",
+    "named": false
+  },
+  {
+    "type": "define",
+    "named": false
+  },
+  {
+    "type": "direction",
+    "named": false
+  },
+  {
+    "type": "directionref",
+    "named": false
+  },
+  {
+    "type": "divisionvol",
+    "named": false
+  },
+  {
+    "type": "elcone",
+    "named": false
+  },
+  {
+    "type": "element",
+    "named": false
+  },
+  {
+    "type": "ellipsoid",
+    "named": false
+  },
+  {
+    "type": "eltube",
+    "named": false
+  },
+  {
     "type": "encoding",
+    "named": false
+  },
+  {
+    "type": "expression",
+    "named": false
+  },
+  {
+    "type": "file",
+    "named": false
+  },
+  {
+    "type": "first",
+    "named": false
+  },
+  {
+    "type": "firstposition",
+    "named": false
+  },
+  {
+    "type": "firstpositionref",
+    "named": false
+  },
+  {
+    "type": "firstrotation",
+    "named": false
+  },
+  {
+    "type": "firstrotationref",
+    "named": false
+  },
+  {
+    "type": "fraction",
+    "named": false
+  },
+  {
+    "type": "gdml",
+    "named": false
+  },
+  {
+    "type": "genericPolycone",
+    "named": false
+  },
+  {
+    "type": "genericPolyhedra",
+    "named": false
+  },
+  {
+    "type": "hype",
+    "named": false
+  },
+  {
+    "type": "intersection",
+    "named": false
+  },
+  {
+    "type": "isotope",
+    "named": false
+  },
+  {
+    "type": "loop",
+    "named": false
+  },
+  {
+    "type": "material",
+    "named": false
+  },
+  {
+    "type": "materialref",
+    "named": false
+  },
+  {
+    "type": "materials",
+    "named": false
+  },
+  {
+    "type": "matrix",
+    "named": false
+  },
+  {
+    "type": "multiUnion",
+    "named": false
+  },
+  {
+    "type": "multiUnionNode",
     "named": false
   },
   {
@@ -1093,7 +3769,211 @@
     "named": false
   },
   {
+    "type": "offset",
+    "named": false
+  },
+  {
+    "type": "opticalsurface",
+    "named": false
+  },
+  {
+    "type": "orb",
+    "named": false
+  },
+  {
+    "type": "para",
+    "named": false
+  },
+  {
+    "type": "paraboloid",
+    "named": false
+  },
+  {
+    "type": "parameterised_position_size",
+    "named": false
+  },
+  {
+    "type": "parameters",
+    "named": false
+  },
+  {
+    "type": "paramvol",
+    "named": false
+  },
+  {
+    "type": "physvol",
+    "named": false
+  },
+  {
+    "type": "physvolref",
+    "named": false
+  },
+  {
+    "type": "polycone",
+    "named": false
+  },
+  {
+    "type": "polyhedra",
+    "named": false
+  },
+  {
+    "type": "position",
+    "named": false
+  },
+  {
+    "type": "positionref",
+    "named": false
+  },
+  {
+    "type": "property",
+    "named": false
+  },
+  {
+    "type": "quadrangular",
+    "named": false
+  },
+  {
+    "type": "quantity",
+    "named": false
+  },
+  {
+    "type": "reflectedSolid",
+    "named": false
+  },
+  {
+    "type": "replicate_along_axis",
+    "named": false
+  },
+  {
+    "type": "replicavol",
+    "named": false
+  },
+  {
+    "type": "rotation",
+    "named": false
+  },
+  {
+    "type": "rotationref",
+    "named": false
+  },
+  {
+    "type": "rzpoint",
+    "named": false
+  },
+  {
+    "type": "scale",
+    "named": false
+  },
+  {
+    "type": "scaledSolid",
+    "named": false
+  },
+  {
+    "type": "scaleref",
+    "named": false
+  },
+  {
+    "type": "second",
+    "named": false
+  },
+  {
+    "type": "section",
+    "named": false
+  },
+  {
+    "type": "setup",
+    "named": false
+  },
+  {
+    "type": "skinsurface",
+    "named": false
+  },
+  {
+    "type": "solid",
+    "named": false
+  },
+  {
+    "type": "solidref",
+    "named": false
+  },
+  {
+    "type": "solids",
+    "named": false
+  },
+  {
+    "type": "sphere",
+    "named": false
+  },
+  {
     "type": "standalone",
+    "named": false
+  },
+  {
+    "type": "structure",
+    "named": false
+  },
+  {
+    "type": "subtraction",
+    "named": false
+  },
+  {
+    "type": "tessellated",
+    "named": false
+  },
+  {
+    "type": "tet",
+    "named": false
+  },
+  {
+    "type": "torus",
+    "named": false
+  },
+  {
+    "type": "trap",
+    "named": false
+  },
+  {
+    "type": "trd",
+    "named": false
+  },
+  {
+    "type": "triangular",
+    "named": false
+  },
+  {
+    "type": "tube",
+    "named": false
+  },
+  {
+    "type": "twistedbox",
+    "named": false
+  },
+  {
+    "type": "twistedtrap",
+    "named": false
+  },
+  {
+    "type": "twistedtrd",
+    "named": false
+  },
+  {
+    "type": "twistedtubs",
+    "named": false
+  },
+  {
+    "type": "twoDimVertex",
+    "named": false
+  },
+  {
+    "type": "union",
+    "named": false
+  },
+  {
+    "type": "userinfo",
+    "named": false
+  },
+  {
+    "type": "variable",
     "named": false
   },
   {
@@ -1101,8 +3981,20 @@
     "named": false
   },
   {
+    "type": "volume",
+    "named": false
+  },
+  {
+    "type": "volumeref",
+    "named": false
+  },
+  {
+    "type": "width",
+    "named": false
+  },
+  {
     "type": "world",
-    "named": true
+    "named": false
   },
   {
     "type": "xml",
@@ -1117,7 +4009,15 @@
     "named": false
   },
   {
+    "type": "xtru",
+    "named": false
+  },
+  {
     "type": "yes",
+    "named": false
+  },
+  {
+    "type": "zplane",
     "named": false
   },
   {
