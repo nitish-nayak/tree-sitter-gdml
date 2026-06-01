@@ -1,0 +1,40 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "gdml",
+      "camelcase": "GDML",
+      "title": "Geometry Description Parser Language",
+      "scope": "source.gdml",
+      "file-types": [
+        "gdml"
+      ],
+      "path": "gdml",
+      "injection-regex": "^gdml$",
+      "class-name": "TreeSitterGdml"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Parser for GDML",
+    "authors": [
+      {
+        "name": "Nitish Nayak",
+        "email": "nitish.nayakb@gmail.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/tree-sitter/tree-sitter-gdml"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
