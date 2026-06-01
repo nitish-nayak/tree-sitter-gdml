@@ -44,11 +44,11 @@ const gdmlRules = {};
 for (const tag of GDML_TAGS) {
   // Accept both <tag …/> and <tag>…</tag>; structure only.
   gdmlRules[nameOf(tag)] = $ => choice(
-    seq('<', $._gdml_marker, tag, c.rseq($._S, $.Attribute), optional($._S), '/>'),
+    seq('<', $._gdml_open, tag, c.rseq($._S, $.Attribute), optional($._S), '/>'),
     seq(
-      seq('<', $._gdml_marker, tag, c.rseq($._S, $.Attribute), optional($._S), '>'),
+      seq('<', $._gdml_open, tag, c.rseq($._S, $.Attribute), optional($._S), '>'),
       optional($.content),
-      seq('</', $._gdml_marker, tag, optional($._S), '>'),
+      seq('</', $._gdml_close, tag, optional($._S), '>'),
     ),
   );
 }
@@ -68,7 +68,8 @@ export default grammar(xml, {
     $.CData,
     'xml-model',
     'xml-stylesheet',
-    $._gdml_marker,
+    $._gdml_open,
+    $._gdml_close,
     $._start_tag_name,
     $._end_tag_name,
     $._erroneous_end_name,

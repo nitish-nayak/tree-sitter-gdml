@@ -87,10 +87,10 @@ static bool scan_start_tag_name(Vector *tags, TSLexer *lexer, const bool *valid_
     }
     // Zero-width marker (end left at start): leave the name for the grammar to lex.
     // We obtain the typed node of the GDML tag like <physvol> directly in grammar.js through $.physvol, etc.
-    if (valid_symbols[GDML_MARKER] && is_gdml_tag(&tag_name)) {
+    if (valid_symbols[GDML_OPEN] && is_gdml_tag(&tag_name)) {
         array_delete(&tag_name);
         push_sentinel(tags);
-        lexer->result_symbol = GDML_MARKER;
+        lexer->result_symbol = GDML_OPEN;
         return true;
     }
 
@@ -109,12 +109,12 @@ static bool scan_end_tag_name(Vector *tags, TSLexer *lexer, const bool *valid_sy
     }
 
     // Zero-width marker; pop the sentinel its open tag pushed.
-    if (valid_symbols[GDML_MARKER] && is_gdml_tag(&tag_name)) {
+    if (valid_symbols[GDML_CLOSE] && is_gdml_tag(&tag_name)) {
         array_delete(&tag_name);
         if (tags->size > 0 && is_sentinel(array_back(tags))) {
             array_delete(&array_pop(tags));
         }
-        lexer->result_symbol = GDML_MARKER;
+        lexer->result_symbol = GDML_CLOSE;
         return true;
     }
 
@@ -247,11 +247,11 @@ bool tree_sitter_gdml_external_scanner_scan(void *payload, TSLexer *lexer, const
         case '\0':
             break;
         default:
-            if (valid_symbols[START_TAG_NAME]) {
+            // GDML_OPEN/GDML_CLOSE are only ever valid at a start/end tag respectively.
+            if (valid_symbols[START_TAG_NAME] || valid_symbols[GDML_OPEN]) {
                 return scan_start_tag_name(tags, lexer, valid_symbols);
             }
-            // A bare marker (no END_TAG_NAME) is a typed container's end tag.
-            if (valid_symbols[END_TAG_NAME] || valid_symbols[GDML_MARKER]) {
+            if (valid_symbols[END_TAG_NAME] || valid_symbols[GDML_CLOSE]) {
                 return scan_end_tag_name(tags, lexer, valid_symbols);
             }
     }
