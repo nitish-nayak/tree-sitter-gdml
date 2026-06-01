@@ -115,20 +115,17 @@
   {
     "type": "ALref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -282,20 +279,17 @@
   {
     "type": "Dref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -454,20 +448,17 @@
   {
     "type": "MEEref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -629,20 +620,17 @@
   {
     "type": "Pref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -726,20 +714,17 @@
   {
     "type": "RLref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -818,20 +803,17 @@
   {
     "type": "Tref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -1176,20 +1158,17 @@
   {
     "type": "directionref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -1861,20 +1840,17 @@
   {
     "type": "first",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -1899,20 +1875,17 @@
   {
     "type": "firstpositionref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -1937,20 +1910,17 @@
   {
     "type": "firstrotationref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2146,20 +2116,17 @@
   {
     "type": "materialref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2412,20 +2379,17 @@
   {
     "type": "physvolref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2488,20 +2452,17 @@
   {
     "type": "positionref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2675,20 +2636,17 @@
   {
     "type": "rotationref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2751,39 +2709,33 @@
   {
     "type": "scaleref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
     "type": "second",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2846,39 +2798,33 @@
   {
     "type": "solid",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
     "type": "solidref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -3264,20 +3210,17 @@
   {
     "type": "volumeref",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -3302,20 +3245,17 @@
   {
     "type": "world",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "Attribute",
-          "named": true
-        },
-        {
-          "type": "content",
-          "named": true
-        }
-      ]
+    "fields": {
+      "ref": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -3834,6 +3774,10 @@
   },
   {
     "type": "quantity",
+    "named": false
+  },
+  {
+    "type": "ref",
     "named": false
   },
   {

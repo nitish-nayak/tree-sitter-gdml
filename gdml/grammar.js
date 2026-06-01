@@ -7,7 +7,7 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 import xml from "@tree-sitter-grammars/tree-sitter-xml/xml/grammar.js";
-import * as c from "@tree-sitter-grammars/tree-sitter-xml/common/common.mjs";
+import { gdml_rules, gdml_tag } from "./rules.mjs";
 
 // Tags emitted as typed nodes. MUST stay in sync with GDML_TAGS[] in src/scanner.c.
 const GDML_TAGS = [
@@ -37,21 +37,11 @@ const GDML_TAGS = [
 ];
 
 // <element> would clash with the inherited `element` rule, so its node is renamed.
-const NODE_NAME = { element: 'gdml_element' };
-const nameOf = tag => NODE_NAME[tag] || tag;
+const NODE_RENAMES = { element: 'gdml_element' };
+const node_name = tag => NODE_RENAMES[tag] || tag;
 
-const gdmlRules = {};
-for (const tag of GDML_TAGS) {
-  // Accept both <tag …/> and <tag>…</tag>; structure only.
-  gdmlRules[nameOf(tag)] = $ => choice(
-    seq('<', $._gdml_open, tag, c.rseq($._S, $.Attribute), optional($._S), '/>'),
-    seq(
-      seq('<', $._gdml_open, tag, c.rseq($._S, $.Attribute), optional($._S), '>'),
-      optional($.content),
-      seq('</', $._gdml_close, tag, optional($._S), '>'),
-    ),
-  );
-}
+const gdml_tag_rules = {};
+for (const tag of GDML_TAGS) gdml_tag_rules[node_name(tag)] = $ => gdml_tag($, tag);
 
 export default grammar(xml, {
   name: "gdml",
@@ -79,10 +69,11 @@ export default grammar(xml, {
   rules: {
     // Typed GDML elements take priority; unknown tags fall back to generic XML.
     element: ($, original) => choice(
-      ...GDML_TAGS.map(tag => $[nameOf(tag)]),
+      ...GDML_TAGS.map(tag => $[node_name(tag)]),
       original,
     ),
 
-    ...gdmlRules,
+    ...gdml_rules,       // shared hidden rules (_ref)
+    ...gdml_tag_rules,   // generated per-tag rules
   },
 });
