@@ -1282,10 +1282,6 @@
           "named": true
         },
         {
-          "type": "auxiliary",
-          "named": true
-        },
-        {
           "type": "string_attribute",
           "named": true
         },
