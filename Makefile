@@ -6,8 +6,8 @@ LANGUAGE_NAME := tree-sitter-gdml
 HOMEPAGE_URL := https://github.com/tree-sitter/tree-sitter-gdml
 VERSION := 0.1.0
 
-# repository
-SRC_DIR := src
+# grammar sources live under gdml/ (see tree-sitter.json "path")
+SRC_DIR := gdml/src
 
 TS ?= tree-sitter
 
