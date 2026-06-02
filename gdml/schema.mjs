@@ -93,6 +93,7 @@ export const gdml_restrictedset = {
   element: ['D', 'Dref', 'atom', 'fraction'],
   isotope: ['D', 'Dref', 'atom'],
   opticalsurface: ['property'],
+  auxiliary: ['auxiliary'],
   loop: ['volume', 'physvol', 'loop', ...solid_tags],
   replicate_along_axis: ['position', 'positionref', 'rotation', 'rotationref',
     'direction', 'directionref', 'width', 'offset'],
@@ -112,6 +113,6 @@ export const leaf_tags = [
   'property', 'zplane', 'rzpoint', 'firstposition', 'firstrotation', 'section',
   'twoDimVertex', 'triangular', 'quadrangular',
   // structure
-  'direction', 'width', 'offset', 'file', 'auxiliary',
+  'direction', 'width', 'offset', 'file',
   ...dimension_tags,
 ];

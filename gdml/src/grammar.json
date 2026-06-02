@@ -18448,8 +18448,17 @@
             {
               "type": "REPEAT",
               "content": {
-                "type": "SYMBOL",
-                "name": "_misc"
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "auxiliary"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "_misc"
+                  }
+                ]
               }
             },
             {
