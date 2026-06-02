@@ -998,7 +998,39 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "auxiliary",
+          "named": true
+        },
+        {
+          "type": "paramvol",
+          "named": true
+        },
+        {
+          "type": "physvol",
+          "named": true
+        },
+        {
+          "type": "replicavol",
           "named": true
         },
         {
@@ -1066,7 +1098,27 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "auxiliary",
           "named": true
         },
         {
@@ -1155,14 +1207,34 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "Attribute",
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "physvolref",
           "named": true
         },
         {
@@ -1489,11 +1561,59 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "constant",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "matrix",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "quantity",
+          "named": true
+        },
+        {
+          "type": "rotation",
+          "named": true
+        },
+        {
+          "type": "scale",
           "named": true
         },
         {
           "type": "value_attribute",
+          "named": true
+        },
+        {
+          "type": "variable",
           "named": true
         }
       ]
@@ -1566,18 +1686,38 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "Attribute",
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
           "named": true
         },
         {
           "type": "value_attribute",
+          "named": true
+        },
+        {
+          "type": "volumeref",
           "named": true
         }
       ]
@@ -2472,14 +2612,50 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "Attribute",
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "define",
+          "named": true
+        },
+        {
+          "type": "materials",
+          "named": true
+        },
+        {
+          "type": "setup",
+          "named": true
+        },
+        {
+          "type": "solids",
+          "named": true
+        },
+        {
+          "type": "structure",
           "named": true
         },
         {
@@ -2513,7 +2689,39 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "D",
+          "named": true
+        },
+        {
+          "type": "Dref",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "atom",
+          "named": true
+        },
+        {
+          "type": "fraction",
           "named": true
         },
         {
@@ -2582,7 +2790,27 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "rzpoint",
           "named": true
         },
         {
@@ -2616,7 +2844,27 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "rzpoint",
           "named": true
         },
         {
@@ -2684,7 +2932,63 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "first",
+          "named": true
+        },
+        {
+          "type": "firstposition",
+          "named": true
+        },
+        {
+          "type": "firstpositionref",
+          "named": true
+        },
+        {
+          "type": "firstrotation",
+          "named": true
+        },
+        {
+          "type": "firstrotationref",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "positionref",
+          "named": true
+        },
+        {
+          "type": "rotation",
+          "named": true
+        },
+        {
+          "type": "rotationref",
+          "named": true
+        },
+        {
+          "type": "second",
           "named": true
         },
         {
@@ -2718,7 +3022,35 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "D",
+          "named": true
+        },
+        {
+          "type": "Dref",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "atom",
           "named": true
         },
         {
@@ -2752,11 +3084,171 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "arb8",
+          "named": true
+        },
+        {
+          "type": "box",
+          "named": true
+        },
+        {
+          "type": "cone",
+          "named": true
+        },
+        {
+          "type": "cutTube",
+          "named": true
+        },
+        {
+          "type": "elcone",
+          "named": true
+        },
+        {
+          "type": "ellipsoid",
+          "named": true
+        },
+        {
+          "type": "eltube",
+          "named": true
+        },
+        {
+          "type": "genericPolycone",
+          "named": true
+        },
+        {
+          "type": "genericPolyhedra",
+          "named": true
+        },
+        {
+          "type": "hype",
+          "named": true
+        },
+        {
+          "type": "intersection",
+          "named": true
+        },
+        {
+          "type": "loop",
+          "named": true
+        },
+        {
+          "type": "multiUnion",
+          "named": true
+        },
+        {
+          "type": "orb",
+          "named": true
+        },
+        {
+          "type": "para",
+          "named": true
+        },
+        {
+          "type": "paraboloid",
+          "named": true
+        },
+        {
+          "type": "physvol",
+          "named": true
+        },
+        {
+          "type": "polycone",
+          "named": true
+        },
+        {
+          "type": "polyhedra",
+          "named": true
+        },
+        {
+          "type": "reflectedSolid",
+          "named": true
+        },
+        {
+          "type": "scaledSolid",
+          "named": true
+        },
+        {
+          "type": "sphere",
+          "named": true
+        },
+        {
+          "type": "subtraction",
+          "named": true
+        },
+        {
+          "type": "tessellated",
+          "named": true
+        },
+        {
+          "type": "tet",
+          "named": true
+        },
+        {
+          "type": "torus",
+          "named": true
+        },
+        {
+          "type": "trap",
+          "named": true
+        },
+        {
+          "type": "trd",
+          "named": true
+        },
+        {
+          "type": "tube",
+          "named": true
+        },
+        {
+          "type": "twistedbox",
+          "named": true
+        },
+        {
+          "type": "twistedtrap",
+          "named": true
+        },
+        {
+          "type": "twistedtrd",
+          "named": true
+        },
+        {
+          "type": "twistedtubs",
+          "named": true
+        },
+        {
+          "type": "union",
           "named": true
         },
         {
           "type": "value_attribute",
+          "named": true
+        },
+        {
+          "type": "volume",
+          "named": true
+        },
+        {
+          "type": "xtru",
           "named": true
         }
       ]
@@ -2782,11 +3274,91 @@
       "required": false,
       "types": [
         {
+          "type": "AL",
+          "named": true
+        },
+        {
+          "type": "ALref",
+          "named": true
+        },
+        {
           "type": "Attribute",
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "D",
+          "named": true
+        },
+        {
+          "type": "Dref",
+          "named": true
+        },
+        {
+          "type": "MEE",
+          "named": true
+        },
+        {
+          "type": "MEEref",
+          "named": true
+        },
+        {
+          "type": "P",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "Pref",
+          "named": true
+        },
+        {
+          "type": "RL",
+          "named": true
+        },
+        {
+          "type": "RLref",
+          "named": true
+        },
+        {
+          "type": "T",
+          "named": true
+        },
+        {
+          "type": "Tref",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "atom",
+          "named": true
+        },
+        {
+          "type": "composite",
+          "named": true
+        },
+        {
+          "type": "fraction",
+          "named": true
+        },
+        {
+          "type": "property",
           "named": true
         },
         {
@@ -2836,7 +3408,39 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "define",
+          "named": true
+        },
+        {
+          "type": "gdml_element",
+          "named": true
+        },
+        {
+          "type": "isotope",
+          "named": true
+        },
+        {
+          "type": "material",
           "named": true
         },
         {
@@ -2904,7 +3508,27 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "multiUnionNode",
           "named": true
         },
         {
@@ -2938,7 +3562,43 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "positionref",
+          "named": true
+        },
+        {
+          "type": "rotation",
+          "named": true
+        },
+        {
+          "type": "rotationref",
+          "named": true
+        },
+        {
+          "type": "solid",
           "named": true
         },
         {
@@ -3006,7 +3666,27 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "property",
           "named": true
         },
         {
@@ -3272,18 +3952,66 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "Attribute",
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "file",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "positionref",
+          "named": true
+        },
+        {
+          "type": "rotation",
+          "named": true
+        },
+        {
+          "type": "rotationref",
+          "named": true
+        },
+        {
+          "type": "scale",
+          "named": true
+        },
+        {
+          "type": "scaleref",
           "named": true
         },
         {
           "type": "value_attribute",
+          "named": true
+        },
+        {
+          "type": "volumeref",
           "named": true
         }
       ]
@@ -3329,11 +4057,31 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
           "named": true
         },
         {
           "type": "value_attribute",
+          "named": true
+        },
+        {
+          "type": "zplane",
           "named": true
         }
       ]
@@ -3363,11 +4111,31 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
           "named": true
         },
         {
           "type": "value_attribute",
+          "named": true
+        },
+        {
+          "type": "zplane",
           "named": true
         }
       ]
@@ -3618,11 +4386,59 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "direction",
+          "named": true
+        },
+        {
+          "type": "directionref",
+          "named": true
+        },
+        {
+          "type": "offset",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "positionref",
+          "named": true
+        },
+        {
+          "type": "rotation",
+          "named": true
+        },
+        {
+          "type": "rotationref",
           "named": true
         },
         {
           "type": "value_attribute",
+          "named": true
+        },
+        {
+          "type": "width",
           "named": true
         }
       ]
@@ -3645,18 +4461,42 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "Attribute",
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "replicate_along_axis",
           "named": true
         },
         {
           "type": "value_attribute",
+          "named": true
+        },
+        {
+          "type": "volumeref",
           "named": true
         }
       ]
@@ -3797,14 +4637,42 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "Attribute",
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "scale",
+          "named": true
+        },
+        {
+          "type": "scaleref",
+          "named": true
+        },
+        {
+          "type": "solidref",
           "named": true
         },
         {
@@ -3897,18 +4765,38 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "Attribute",
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
           "named": true
         },
         {
           "type": "value_attribute",
+          "named": true
+        },
+        {
+          "type": "world",
           "named": true
         }
       ]
@@ -3931,18 +4819,38 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "Attribute",
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
           "named": true
         },
         {
           "type": "value_attribute",
+          "named": true
+        },
+        {
+          "type": "volumeref",
           "named": true
         }
       ]
@@ -4004,11 +4912,167 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "arb8",
+          "named": true
+        },
+        {
+          "type": "box",
+          "named": true
+        },
+        {
+          "type": "cone",
+          "named": true
+        },
+        {
+          "type": "cutTube",
+          "named": true
+        },
+        {
+          "type": "define",
+          "named": true
+        },
+        {
+          "type": "elcone",
+          "named": true
+        },
+        {
+          "type": "ellipsoid",
+          "named": true
+        },
+        {
+          "type": "eltube",
+          "named": true
+        },
+        {
+          "type": "genericPolycone",
+          "named": true
+        },
+        {
+          "type": "genericPolyhedra",
+          "named": true
+        },
+        {
+          "type": "hype",
+          "named": true
+        },
+        {
+          "type": "intersection",
+          "named": true
+        },
+        {
+          "type": "multiUnion",
+          "named": true
+        },
+        {
+          "type": "opticalsurface",
+          "named": true
+        },
+        {
+          "type": "orb",
+          "named": true
+        },
+        {
+          "type": "para",
+          "named": true
+        },
+        {
+          "type": "paraboloid",
+          "named": true
+        },
+        {
+          "type": "polycone",
+          "named": true
+        },
+        {
+          "type": "polyhedra",
+          "named": true
+        },
+        {
+          "type": "reflectedSolid",
+          "named": true
+        },
+        {
+          "type": "scaledSolid",
+          "named": true
+        },
+        {
+          "type": "sphere",
+          "named": true
+        },
+        {
+          "type": "subtraction",
+          "named": true
+        },
+        {
+          "type": "tessellated",
+          "named": true
+        },
+        {
+          "type": "tet",
+          "named": true
+        },
+        {
+          "type": "torus",
+          "named": true
+        },
+        {
+          "type": "trap",
+          "named": true
+        },
+        {
+          "type": "trd",
+          "named": true
+        },
+        {
+          "type": "tube",
+          "named": true
+        },
+        {
+          "type": "twistedbox",
+          "named": true
+        },
+        {
+          "type": "twistedtrap",
+          "named": true
+        },
+        {
+          "type": "twistedtrd",
+          "named": true
+        },
+        {
+          "type": "twistedtubs",
+          "named": true
+        },
+        {
+          "type": "union",
           "named": true
         },
         {
           "type": "value_attribute",
+          "named": true
+        },
+        {
+          "type": "xtru",
           "named": true
         }
       ]
@@ -4072,11 +5136,47 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "assembly",
+          "named": true
+        },
+        {
+          "type": "bordersurface",
+          "named": true
+        },
+        {
+          "type": "loop",
+          "named": true
+        },
+        {
+          "type": "skinsurface",
           "named": true
         },
         {
           "type": "value_attribute",
+          "named": true
+        },
+        {
+          "type": "volume",
           "named": true
         }
       ]
@@ -4106,7 +5206,63 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "first",
+          "named": true
+        },
+        {
+          "type": "firstposition",
+          "named": true
+        },
+        {
+          "type": "firstpositionref",
+          "named": true
+        },
+        {
+          "type": "firstrotation",
+          "named": true
+        },
+        {
+          "type": "firstrotationref",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "positionref",
+          "named": true
+        },
+        {
+          "type": "rotation",
+          "named": true
+        },
+        {
+          "type": "rotationref",
+          "named": true
+        },
+        {
+          "type": "second",
           "named": true
         },
         {
@@ -4140,7 +5296,31 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "quadrangular",
+          "named": true
+        },
+        {
+          "type": "triangular",
           "named": true
         },
         {
@@ -4598,7 +5778,63 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "first",
+          "named": true
+        },
+        {
+          "type": "firstposition",
+          "named": true
+        },
+        {
+          "type": "firstpositionref",
+          "named": true
+        },
+        {
+          "type": "firstrotation",
+          "named": true
+        },
+        {
+          "type": "firstrotationref",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "positionref",
+          "named": true
+        },
+        {
+          "type": "rotation",
+          "named": true
+        },
+        {
+          "type": "rotationref",
+          "named": true
+        },
+        {
+          "type": "second",
           "named": true
         },
         {
@@ -4632,7 +5868,27 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "auxiliary",
           "named": true
         },
         {
@@ -4719,14 +5975,62 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "Attribute",
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "auxiliary",
+          "named": true
+        },
+        {
+          "type": "divisionvol",
+          "named": true
+        },
+        {
+          "type": "loop",
+          "named": true
+        },
+        {
+          "type": "materialref",
+          "named": true
+        },
+        {
+          "type": "paramvol",
+          "named": true
+        },
+        {
+          "type": "physvol",
+          "named": true
+        },
+        {
+          "type": "replicavol",
+          "named": true
+        },
+        {
+          "type": "solidref",
           "named": true
         },
         {
@@ -4826,7 +6130,31 @@
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "section",
+          "named": true
+        },
+        {
+          "type": "twoDimVertex",
           "named": true
         },
         {

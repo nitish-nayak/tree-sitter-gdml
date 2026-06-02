@@ -3883,8 +3883,33 @@
         }
       ]
     },
-    "gdml": {
+    "_misc": {
       "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "CharData"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "Comment"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "PI"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "CDSect"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_Reference"
+        }
+      ]
+    },
+    "gdml": {
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -3931,7 +3956,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -3939,51 +3964,33 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
+              "type": "CHOICE",
               "members": [
                 {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "gdml"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
+                  "type": "SEQ",
                   "members": [
                     {
                       "type": "SYMBOL",
-                      "name": "_S"
+                      "name": "define"
                     },
                     {
-                      "type": "BLANK"
+                      "type": "REPEAT",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "_misc"
+                      }
                     }
                   ]
                 },
                 {
-                  "type": "STRING",
-                  "value": ">"
+                  "type": "BLANK"
                 }
               ]
             },
@@ -3991,8 +3998,44 @@
               "type": "CHOICE",
               "members": [
                 {
-                  "type": "SYMBOL",
-                  "name": "content"
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "materials"
+                    },
+                    {
+                      "type": "REPEAT",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "_misc"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "solids"
+                    },
+                    {
+                      "type": "REPEAT",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "_misc"
+                      }
+                    }
+                  ]
                 },
                 {
                   "type": "BLANK"
@@ -4003,41 +4046,76 @@
               "type": "SEQ",
               "members": [
                 {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
                   "type": "SYMBOL",
-                  "name": "_gdml_close"
+                  "name": "structure"
                 },
                 {
-                  "type": "STRING",
-                  "value": "gdml"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_misc"
+                  }
                 }
               ]
+            },
+            {
+              "type": "REPEAT1",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "setup"
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "_misc"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "gdml"
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "_S"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "define": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -4084,7 +4162,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -4092,60 +4170,87 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "define"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
                     "members": [
                       {
                         "type": "SYMBOL",
-                        "name": "_S"
+                        "name": "constant"
                       },
                       {
                         "type": "SYMBOL",
-                        "name": "_attribute"
+                        "name": "variable"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "quantity"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "expression"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "matrix"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "position"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "rotation"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "scale"
                       }
                     ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
                       "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
+                      "name": "_misc"
                     }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "define"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -4153,44 +4258,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "define"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "materials": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -4237,7 +4313,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -4245,60 +4321,71 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "materials"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
                     "members": [
                       {
                         "type": "SYMBOL",
-                        "name": "_S"
+                        "name": "define"
                       },
                       {
                         "type": "SYMBOL",
-                        "name": "_attribute"
+                        "name": "isotope"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "gdml_element"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "material"
                       }
                     ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
                       "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
+                      "name": "_misc"
                     }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "materials"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -4306,44 +4393,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "materials"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "solids": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -4390,7 +4448,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -4398,60 +4456,195 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "solids"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
                     "members": [
                       {
                         "type": "SYMBOL",
-                        "name": "_S"
+                        "name": "define"
                       },
                       {
                         "type": "SYMBOL",
-                        "name": "_attribute"
+                        "name": "box"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "cone"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "cutTube"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "elcone"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "ellipsoid"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "eltube"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "hype"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "orb"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "para"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "paraboloid"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "polycone"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "genericPolycone"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "polyhedra"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "genericPolyhedra"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "sphere"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "torus"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "trap"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "trd"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "tet"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "arb8"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "xtru"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "tessellated"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "twistedbox"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "twistedtrap"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "twistedtrd"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "twistedtubs"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "tube"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "union"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "subtraction"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "intersection"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "multiUnion"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "scaledSolid"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "reflectedSolid"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "opticalsurface"
                       }
                     ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
                       "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
+                      "name": "_misc"
                     }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "solids"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -4459,44 +4652,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "solids"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "structure": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -4543,7 +4707,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -4551,60 +4715,75 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "structure"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
                     "members": [
                       {
                         "type": "SYMBOL",
-                        "name": "_S"
+                        "name": "volume"
                       },
                       {
                         "type": "SYMBOL",
-                        "name": "_attribute"
+                        "name": "assembly"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "bordersurface"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "skinsurface"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "loop"
                       }
                     ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
                       "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
+                      "name": "_misc"
                     }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "structure"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -4612,44 +4791,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "structure"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "setup": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -4696,7 +4846,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -4704,60 +4854,51 @@
           "type": "SEQ",
           "members": [
             {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
               "type": "SEQ",
               "members": [
                 {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
                   "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "setup"
+                  "name": "world"
                 },
                 {
                   "type": "REPEAT",
                   "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
+                    "type": "SYMBOL",
+                    "name": "_misc"
                   }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "setup"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -4765,44 +4906,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "setup"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "userinfo": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -4849,7 +4961,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -4857,60 +4969,54 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "userinfo"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "auxiliary"
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
                       "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
+                      "name": "_misc"
                     }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "userinfo"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -4918,37 +5024,8 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "userinfo"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
@@ -6179,7 +6256,7 @@
       ]
     },
     "isotope": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -6226,68 +6303,55 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "D"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "Dref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "atom"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "isotope"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "isotope"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -6295,44 +6359,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "isotope"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "gdml_element": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -6379,68 +6414,59 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "D"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "Dref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "atom"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "fraction"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "element"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "element"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -6448,44 +6474,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "element"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "material": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -6532,68 +6529,107 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "D"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "Dref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "atom"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "fraction"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "composite"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "property"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "RL"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "RLref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "AL"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "ALref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "T"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "Tref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "P"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "Pref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "MEE"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "MEEref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "material"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "material"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -6601,37 +6637,8 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "material"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
@@ -9791,7 +9798,7 @@
       ]
     },
     "polycone": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -9838,68 +9845,47 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "zplane"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "polycone"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "polycone"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -9907,44 +9893,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "polycone"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "genericPolycone": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -9991,68 +9948,47 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "rzpoint"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "genericPolycone"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "genericPolycone"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -10060,44 +9996,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "genericPolycone"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "polyhedra": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -10144,68 +10051,47 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "zplane"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "polyhedra"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "polyhedra"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -10213,44 +10099,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "polyhedra"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "genericPolyhedra": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -10297,68 +10154,47 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "rzpoint"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "genericPolyhedra"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "genericPolyhedra"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -10366,37 +10202,8 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "genericPolyhedra"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
@@ -11321,7 +11128,7 @@
       ]
     },
     "xtru": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -11368,68 +11175,51 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "twoDimVertex"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "section"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "xtru"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "xtru"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -11437,44 +11227,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "xtru"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "tessellated": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -11521,68 +11282,51 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "triangular"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "quadrangular"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "tessellated"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "tessellated"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -11590,37 +11334,8 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "tessellated"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
@@ -12392,7 +12107,7 @@
       ]
     },
     "union": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -12439,68 +12154,83 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "first"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "second"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "position"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "positionref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "rotation"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "rotationref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "firstposition"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "firstpositionref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "firstrotation"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "firstrotationref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "union"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "union"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -12508,44 +12238,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "union"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "subtraction": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -12592,68 +12293,83 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "first"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "second"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "position"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "positionref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "rotation"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "rotationref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "firstposition"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "firstpositionref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "firstrotation"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "firstrotationref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "subtraction"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "subtraction"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -12661,44 +12377,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "subtraction"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "intersection": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -12745,68 +12432,83 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "first"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "second"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "position"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "positionref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "rotation"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "rotationref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "firstposition"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "firstpositionref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "firstrotation"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "firstrotationref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "intersection"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "intersection"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -12814,44 +12516,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "intersection"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "multiUnion": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -12898,68 +12571,47 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "multiUnionNode"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "multiUnion"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "multiUnion"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -12967,44 +12619,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "multiUnion"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "scaledSolid": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -13051,7 +12674,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -13059,60 +12682,76 @@
           "type": "SEQ",
           "members": [
             {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
               "type": "SEQ",
               "members": [
                 {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
                   "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "scaledSolid"
+                  "name": "solidref"
                 },
                 {
                   "type": "REPEAT",
                   "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
+                    "type": "SYMBOL",
+                    "name": "_misc"
                   }
-                },
+                }
+              ]
+            },
+            {
+              "type": "SEQ",
+              "members": [
                 {
                   "type": "CHOICE",
                   "members": [
                     {
                       "type": "SYMBOL",
-                      "name": "_S"
+                      "name": "scale"
                     },
                     {
-                      "type": "BLANK"
+                      "type": "SYMBOL",
+                      "name": "scaleref"
                     }
                   ]
                 },
                 {
-                  "type": "STRING",
-                  "value": ">"
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_misc"
+                  }
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "scaledSolid"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -13120,37 +12759,8 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "scaledSolid"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
@@ -13310,7 +12920,7 @@
       ]
     },
     "opticalsurface": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -13357,68 +12967,47 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "property"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "opticalsurface"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "opticalsurface"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -13426,37 +13015,8 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "opticalsurface"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
@@ -14392,7 +13952,7 @@
       ]
     },
     "multiUnionNode": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -14439,68 +13999,63 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "solid"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "position"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "positionref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "rotation"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "rotationref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "multiUnionNode"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "multiUnionNode"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -14508,37 +14063,8 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "multiUnionNode"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
@@ -15198,7 +14724,7 @@
       ]
     },
     "volume": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -15245,7 +14771,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -15253,60 +14779,111 @@
           "type": "SEQ",
           "members": [
             {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
               "type": "SEQ",
               "members": [
                 {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
                   "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "volume"
+                  "name": "materialref"
                 },
                 {
                   "type": "REPEAT",
                   "content": {
-                    "type": "SEQ",
+                    "type": "SYMBOL",
+                    "name": "_misc"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "solidref"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_misc"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
                     "members": [
                       {
                         "type": "SYMBOL",
-                        "name": "_S"
+                        "name": "physvol"
                       },
                       {
                         "type": "SYMBOL",
-                        "name": "_attribute"
+                        "name": "divisionvol"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "replicavol"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "paramvol"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "loop"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "auxiliary"
                       }
                     ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
                       "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
+                      "name": "_misc"
                     }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "volume"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -15314,44 +14891,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "volume"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "assembly": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -15398,68 +14946,59 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "physvol"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "replicavol"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "paramvol"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "auxiliary"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "assembly"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "assembly"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -15467,44 +15006,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "assembly"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "physvol": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -15551,7 +15061,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -15559,51 +15069,34 @@
           "type": "SEQ",
           "members": [
             {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
               "type": "SEQ",
               "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "physvol"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
                 {
                   "type": "CHOICE",
                   "members": [
                     {
                       "type": "SYMBOL",
-                      "name": "_S"
+                      "name": "volumeref"
                     },
                     {
-                      "type": "BLANK"
+                      "type": "SYMBOL",
+                      "name": "file"
                     }
                   ]
                 },
                 {
-                  "type": "STRING",
-                  "value": ">"
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_misc"
+                  }
                 }
               ]
             },
@@ -15611,8 +15104,29 @@
               "type": "CHOICE",
               "members": [
                 {
-                  "type": "SYMBOL",
-                  "name": "content"
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "position"
+                        },
+                        {
+                          "type": "SYMBOL",
+                          "name": "positionref"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "REPEAT",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "_misc"
+                      }
+                    }
+                  ]
                 },
                 {
                   "type": "BLANK"
@@ -15620,37 +15134,98 @@
               ]
             },
             {
-              "type": "SEQ",
+              "type": "CHOICE",
               "members": [
                 {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "physvol"
-                },
-                {
-                  "type": "CHOICE",
+                  "type": "SEQ",
                   "members": [
                     {
-                      "type": "SYMBOL",
-                      "name": "_S"
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "rotation"
+                        },
+                        {
+                          "type": "SYMBOL",
+                          "name": "rotationref"
+                        }
+                      ]
                     },
                     {
-                      "type": "BLANK"
+                      "type": "REPEAT",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "_misc"
+                      }
                     }
                   ]
                 },
                 {
-                  "type": "STRING",
-                  "value": ">"
+                  "type": "BLANK"
                 }
               ]
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "scale"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "scaleref"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "_misc"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "physvol"
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "_S"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
@@ -15944,7 +15519,7 @@
       ]
     },
     "divisionvol": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -15991,7 +15566,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -15999,60 +15574,51 @@
           "type": "SEQ",
           "members": [
             {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
               "type": "SEQ",
               "members": [
                 {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
                   "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "divisionvol"
+                  "name": "volumeref"
                 },
                 {
                   "type": "REPEAT",
                   "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
+                    "type": "SYMBOL",
+                    "name": "_misc"
                   }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "divisionvol"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -16060,44 +15626,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "divisionvol"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "replicavol": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -16144,7 +15681,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -16152,60 +15689,67 @@
           "type": "SEQ",
           "members": [
             {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
               "type": "SEQ",
               "members": [
                 {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
                   "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "replicavol"
+                  "name": "volumeref"
                 },
                 {
                   "type": "REPEAT",
                   "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
+                    "type": "SYMBOL",
+                    "name": "_misc"
                   }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
                 }
               ]
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "replicate_along_axis"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_misc"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "replicavol"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -16213,37 +15757,8 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "replicavol"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
@@ -16709,7 +16224,7 @@
       ]
     },
     "replicate_along_axis": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -16756,68 +16271,75 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "position"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "positionref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "rotation"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "rotationref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "direction"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "directionref"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "width"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "offset"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "replicate_along_axis"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "replicate_along_axis"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -16825,37 +16347,8 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "replicate_along_axis"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
@@ -17362,7 +16855,7 @@
       ]
     },
     "bordersurface": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -17409,7 +16902,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -17417,60 +16910,67 @@
           "type": "SEQ",
           "members": [
             {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
               "type": "SEQ",
               "members": [
                 {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
                   "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "bordersurface"
+                  "name": "physvolref"
                 },
                 {
                   "type": "REPEAT",
                   "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
+                    "type": "SYMBOL",
+                    "name": "_misc"
                   }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
                 }
               ]
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "physvolref"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_misc"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "bordersurface"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -17478,44 +16978,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "bordersurface"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "skinsurface": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -17562,7 +17033,7 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
         },
@@ -17570,60 +17041,51 @@
           "type": "SEQ",
           "members": [
             {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            },
+            {
               "type": "SEQ",
               "members": [
                 {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
                   "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "skinsurface"
+                  "name": "volumeref"
                 },
                 {
                   "type": "REPEAT",
                   "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
+                    "type": "SYMBOL",
+                    "name": "_misc"
                   }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "skinsurface"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -17631,44 +17093,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "skinsurface"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "loop": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -17715,68 +17148,187 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "volume"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "physvol"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "loop"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "box"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "cone"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "cutTube"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "elcone"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "ellipsoid"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "eltube"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "hype"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "orb"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "para"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "paraboloid"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "polycone"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "genericPolycone"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "polyhedra"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "genericPolyhedra"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "sphere"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "torus"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "trap"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "trd"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "tet"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "arb8"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "xtru"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "tessellated"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "twistedbox"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "twistedtrap"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "twistedtrd"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "twistedtubs"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "tube"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "union"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "subtraction"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "intersection"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "multiUnion"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "scaledSolid"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "reflectedSolid"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "loop"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "loop"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -17784,44 +17336,15 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "loop"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }
       ]
     },
     "auxiliary": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
           "type": "SEQ",
@@ -17868,68 +17391,47 @@
             },
             {
               "type": "STRING",
-              "value": "/>"
+              "value": ">"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "auxiliary"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_misc"
+              }
+            ]
+          }
         },
         {
           "type": "SEQ",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "<"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_open"
-                },
-                {
-                  "type": "STRING",
-                  "value": "auxiliary"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "_S"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_attribute"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": "</"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_gdml_close"
+            },
+            {
+              "type": "STRING",
+              "value": "auxiliary"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "content"
+                  "name": "_S"
                 },
                 {
                   "type": "BLANK"
@@ -17937,37 +17439,8 @@
               ]
             },
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "</"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_gdml_close"
-                },
-                {
-                  "type": "STRING",
-                  "value": "auxiliary"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_S"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ">"
-                }
-              ]
+              "type": "STRING",
+              "value": ">"
             }
           ]
         }

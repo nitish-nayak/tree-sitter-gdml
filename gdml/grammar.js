@@ -7,7 +7,7 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 import xml from "@tree-sitter-grammars/tree-sitter-xml/xml/grammar.js";
-import { gdml_rules, gdml_tag } from "./rules.mjs";
+import { gdml_rules, gdml_tag, node_renames } from "./rules.mjs";
 
 // Tags emitted as typed nodes. MUST stay in sync with GDML_TAGS[] in src/scanner.c.
 const GDML_TAGS = [
@@ -36,9 +36,8 @@ const GDML_TAGS = [
   'bordersurface', 'skinsurface', 'loop', 'auxiliary', 'file', 'world',
 ];
 
-// <element> would clash with the inherited `element` rule, so its node is renamed.
-const NODE_RENAMES = { element: 'gdml_element' };
-const node_name = tag => NODE_RENAMES[tag] || tag;
+// <element> would clash with the inherited `element` rule, so its node is renamed (see rules.mjs).
+const node_name = tag => node_renames[tag] || tag;
 
 const gdml_tag_rules = {};
 for (const tag of GDML_TAGS) gdml_tag_rules[node_name(tag)] = $ => gdml_tag($, tag);
