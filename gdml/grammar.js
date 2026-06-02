@@ -7,7 +7,7 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 import xml from "@tree-sitter-grammars/tree-sitter-xml/xml/grammar.js";
-import { gdml_rules, gdml_tag, node_renames } from "./rules.mjs";
+import { gdml_attr_rules, gdml_tag, node_renames } from "./rules.mjs";
 
 // Tags emitted as typed nodes. MUST stay in sync with GDML_TAGS[] in src/scanner.c.
 const GDML_TAGS = [
@@ -76,7 +76,7 @@ export default grammar(xml, {
       original,
     ),
 
-    ...gdml_rules,       // shared hidden rules (_ref)
+    ...gdml_attr_rules,       // shared hidden rules (_ref)
     ...gdml_tag_rules,   // generated per-tag rules
   },
 });
