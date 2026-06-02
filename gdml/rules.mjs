@@ -32,8 +32,9 @@ const VALUE_ATTRS = [
 
 // Shared rules, spread into the grammar like common.mjs's `rules`.
 export const gdml_rules = {
-  // ref="…" → exposed as the element's `ref` field
+  // ref="…" / name="…" → hoisted to the element's `ref` / `name` field
   _ref: $ => seq('ref', $._Eq, field('ref', $.AttValue)),
+  _name: $ => seq('name', $._Eq, field('name', $.AttValue)),
 
   // ---- attribute-value expression sub-grammar ----
   // a quoted value parsed as an expression (leading/trailing whitespace tolerated)
@@ -63,7 +64,7 @@ export const gdml_rules = {
 
   // x="pi/2." — value is an expression; _attribute routes by name (value-kind vs generic).
   value_attribute: $ => seq(alias(choice(...VALUE_ATTRS), $.Name), $._Eq, field('value', $.gdml_value)),
-  _attribute: $ => choice($.value_attribute, $.Attribute),
+  _attribute: $ => choice($._name, $.value_attribute, $.Attribute),
 };
 
 // reference tags: exactly one attribute, `ref`

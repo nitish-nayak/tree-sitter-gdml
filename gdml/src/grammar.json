@@ -3165,6 +3165,27 @@
         }
       ]
     },
+    "_name": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_Eq"
+        },
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "AttValue"
+          }
+        }
+      ]
+    },
     "gdml_value": {
       "type": "CHOICE",
       "members": [
@@ -3848,6 +3869,10 @@
     "_attribute": {
       "type": "CHOICE",
       "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_name"
+        },
         {
           "type": "SYMBOL",
           "name": "value_attribute"
