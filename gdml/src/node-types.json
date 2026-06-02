@@ -137,6 +137,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -310,6 +314,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -532,6 +540,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -679,6 +691,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -860,6 +876,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -980,6 +1000,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -1080,6 +1104,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -1146,6 +1174,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -1193,6 +1225,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -1247,6 +1283,10 @@
         },
         {
           "type": "auxiliary",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -1366,6 +1406,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -1416,6 +1460,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -1463,6 +1511,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -1581,6 +1633,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -1628,6 +1684,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -1681,6 +1741,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -1728,6 +1792,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -1839,6 +1907,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -1917,6 +1989,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         },
@@ -1968,6 +2044,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -2034,6 +2114,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -2158,6 +2242,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -2745,6 +2833,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -2792,6 +2884,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -2845,6 +2941,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -2895,6 +2995,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -2942,6 +3046,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -3011,6 +3119,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -3074,6 +3186,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -3143,6 +3259,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -3206,6 +3326,10 @@
         },
         {
           "type": "solids",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -3276,6 +3400,10 @@
         },
         {
           "type": "fraction",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -3368,6 +3496,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -3422,6 +3554,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -3472,6 +3608,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -3519,6 +3659,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -3612,6 +3756,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -3671,6 +3819,10 @@
         },
         {
           "type": "atom",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -3809,6 +3961,10 @@
         },
         {
           "type": "sphere",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -3982,6 +4138,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -4064,6 +4224,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -4111,6 +4275,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -4165,6 +4333,10 @@
         },
         {
           "type": "multiUnionNode",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -4238,6 +4410,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -4285,6 +4461,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -4342,6 +4522,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -4389,6 +4573,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -4442,6 +4630,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -4489,6 +4681,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -4542,6 +4738,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -4589,6 +4789,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -4643,6 +4847,10 @@
         },
         {
           "type": "parameters",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -4736,6 +4944,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "torus_dimensions",
           "named": true
         },
@@ -4803,6 +5015,10 @@
         },
         {
           "type": "parameterised_position_size",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -4923,6 +5139,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         },
@@ -4993,6 +5213,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         },
@@ -5047,6 +5271,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -5094,6 +5322,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -5151,6 +5383,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -5198,6 +5434,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -5302,6 +5542,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -5349,6 +5593,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -5402,6 +5650,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -5449,6 +5701,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -5530,6 +5786,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         },
@@ -5588,6 +5848,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         },
@@ -5639,6 +5903,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -5708,6 +5976,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -5755,6 +6027,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -5817,6 +6093,10 @@
         },
         {
           "type": "solidref",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -5902,6 +6182,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -5949,6 +6233,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -6003,6 +6291,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -6180,6 +6472,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "subtraction",
           "named": true
         },
@@ -6282,6 +6578,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -6332,7 +6632,37 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_attribute",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "Name",
           "named": true
         }
       ]
@@ -6395,6 +6725,10 @@
         },
         {
           "type": "skinsurface",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -6492,6 +6826,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -6543,6 +6881,10 @@
         },
         {
           "type": "quadrangular",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -6600,6 +6942,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -6647,6 +6993,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -6700,6 +7050,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -6747,6 +7101,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -6800,6 +7158,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -6847,6 +7209,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -6900,6 +7266,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -6947,6 +7317,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -7000,6 +7374,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -7047,6 +7425,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -7100,6 +7482,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -7147,6 +7533,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -7200,6 +7590,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -7250,6 +7644,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -7297,6 +7695,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -7440,6 +7842,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -7491,6 +7897,10 @@
         },
         {
           "type": "auxiliary",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -7567,6 +7977,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -7652,6 +8066,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -7715,6 +8133,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {
@@ -7788,6 +8210,10 @@
           "named": true
         },
         {
+          "type": "string_attribute",
+          "named": true
+        },
+        {
           "type": "twoDimVertex",
           "named": true
         },
@@ -7839,6 +8265,10 @@
         },
         {
           "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "string_attribute",
           "named": true
         },
         {

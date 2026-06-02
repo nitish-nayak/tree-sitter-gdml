@@ -17,8 +17,8 @@ export const node_renames = { element: 'gdml_element' };
 // Expression operator precedence (higher binds tighter).
 const precedence = { add: 1, mul: 2, pow: 3, unary: 4, call: 5 };
 
-// Attribute names carrying ExpressionOrIDREFType values (parsed as expressions).
-// Sourced from the GDML schema; everything else stays a plain string AttValue.
+// Attribute names carrying numeric/expression values (ExpressionOrIDREFType, or integer counts),
+// parsed via gdml_value. (`value` is xs:string on opticalsurface but numeric in practice — kept here.)
 const value_attrs = [
   'value', 'x', 'y', 'z', 'x1', 'x2', 'x3', 'x4', 'y1', 'y2',
   'r', 'rmin', 'rmax', 'rmax1', 'rmax2', 'rtor', 'rlo', 'rhi',
@@ -32,6 +32,20 @@ const value_attrs = [
   'xOffset', 'yOffset', 'zOrder', 'zPosition',
   'v1x', 'v1y', 'v2x', 'v2y', 'v3x', 'v3y', 'v4x', 'v4y',
   'v5x', 'v5y', 'v6x', 'v6y', 'v7x', 'v7y', 'v8x', 'v8y',
+  'rmin1', 'rmin2', 'zcut1', 'zcut2', 'starttheta', 'rho',
+  'sx', 'sy', 'sz', 'rx', 'ry', 'rz',
+  'zlen', 'endinnerrad', 'endouterrad', 'midinnerrad', 'midouterrad',
+  'negativeEndz', 'positiveEndz', 'nseg', 'totphi',
+  'DeltaPhi', 'InR', 'OutR', 'StartPhi', 'hz', 'startPhi', 'openPhi', 'numRZ', 'numSide',
+  // integer-valued (xs:integer/positiveInteger) — a plain integer is still a valid expression
+  'n', 'Z', 'N', 'copynumber', 'copy_num_start', 'copy_num_step', 'ncopies', 'from', 'step', 'coldim',
+];
+
+// Attribute names with plain string / enum values (xs:string, or the `state` NMTOKEN enum):
+// fielded but kept as a raw AttValue (not parsed).
+const string_attrs = [
+  'unit', 'lunit', 'aunit', 'type', 'axis', 'state', 'formula', 'volname', 'values',
+  'version', 'for', 'model', 'finish', 'auxtype', 'auxvalue', 'auxunit',
 ];
 
 // The Solid substitution group (gdml_solids.xsd): every concrete element usable where a solid fits.
@@ -130,9 +144,11 @@ export const gdml_rules = {
   number: _ => token(/(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?/),
   identifier: _ => token(/[A-Za-z_][A-Za-z0-9_]*/),
 
-  // x="pi/2." — value is an expression; _attribute routes by name (value-kind vs generic).
+  // x="pi/2." → parsed expression; unit="mm" → raw string. Attr name aliased to Name, content under
+  // `value`; _attribute routes by name (value-kind, string-kind, or generic).
   value_attribute: $ => seq(alias(choice(...value_attrs), $.Name), $._Eq, field('value', $.gdml_value)),
-  _attribute: $ => choice($._name, $.value_attribute, $.Attribute),
+  string_attribute: $ => seq(alias(choice(...string_attrs), $.Name), $._Eq, field('value', $.AttValue)),
+  _attribute: $ => choice($._name, $.value_attribute, $.string_attribute, $.Attribute),
 
   // XML trivia allowed between element children (whitespace, comments, refs, CDATA)
   _misc: $ => choice($.CharData, $.Comment, $.PI, $.CDSect, $._Reference),

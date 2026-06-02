@@ -3898,6 +3898,166 @@
               {
                 "type": "STRING",
                 "value": "v8y"
+              },
+              {
+                "type": "STRING",
+                "value": "rmin1"
+              },
+              {
+                "type": "STRING",
+                "value": "rmin2"
+              },
+              {
+                "type": "STRING",
+                "value": "zcut1"
+              },
+              {
+                "type": "STRING",
+                "value": "zcut2"
+              },
+              {
+                "type": "STRING",
+                "value": "starttheta"
+              },
+              {
+                "type": "STRING",
+                "value": "rho"
+              },
+              {
+                "type": "STRING",
+                "value": "sx"
+              },
+              {
+                "type": "STRING",
+                "value": "sy"
+              },
+              {
+                "type": "STRING",
+                "value": "sz"
+              },
+              {
+                "type": "STRING",
+                "value": "rx"
+              },
+              {
+                "type": "STRING",
+                "value": "ry"
+              },
+              {
+                "type": "STRING",
+                "value": "rz"
+              },
+              {
+                "type": "STRING",
+                "value": "zlen"
+              },
+              {
+                "type": "STRING",
+                "value": "endinnerrad"
+              },
+              {
+                "type": "STRING",
+                "value": "endouterrad"
+              },
+              {
+                "type": "STRING",
+                "value": "midinnerrad"
+              },
+              {
+                "type": "STRING",
+                "value": "midouterrad"
+              },
+              {
+                "type": "STRING",
+                "value": "negativeEndz"
+              },
+              {
+                "type": "STRING",
+                "value": "positiveEndz"
+              },
+              {
+                "type": "STRING",
+                "value": "nseg"
+              },
+              {
+                "type": "STRING",
+                "value": "totphi"
+              },
+              {
+                "type": "STRING",
+                "value": "DeltaPhi"
+              },
+              {
+                "type": "STRING",
+                "value": "InR"
+              },
+              {
+                "type": "STRING",
+                "value": "OutR"
+              },
+              {
+                "type": "STRING",
+                "value": "StartPhi"
+              },
+              {
+                "type": "STRING",
+                "value": "hz"
+              },
+              {
+                "type": "STRING",
+                "value": "startPhi"
+              },
+              {
+                "type": "STRING",
+                "value": "openPhi"
+              },
+              {
+                "type": "STRING",
+                "value": "numRZ"
+              },
+              {
+                "type": "STRING",
+                "value": "numSide"
+              },
+              {
+                "type": "STRING",
+                "value": "n"
+              },
+              {
+                "type": "STRING",
+                "value": "Z"
+              },
+              {
+                "type": "STRING",
+                "value": "N"
+              },
+              {
+                "type": "STRING",
+                "value": "copynumber"
+              },
+              {
+                "type": "STRING",
+                "value": "copy_num_start"
+              },
+              {
+                "type": "STRING",
+                "value": "copy_num_step"
+              },
+              {
+                "type": "STRING",
+                "value": "ncopies"
+              },
+              {
+                "type": "STRING",
+                "value": "from"
+              },
+              {
+                "type": "STRING",
+                "value": "step"
+              },
+              {
+                "type": "STRING",
+                "value": "coldim"
               }
             ]
           },
@@ -3918,6 +4078,97 @@
         }
       ]
     },
+    "string_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "unit"
+              },
+              {
+                "type": "STRING",
+                "value": "lunit"
+              },
+              {
+                "type": "STRING",
+                "value": "aunit"
+              },
+              {
+                "type": "STRING",
+                "value": "type"
+              },
+              {
+                "type": "STRING",
+                "value": "axis"
+              },
+              {
+                "type": "STRING",
+                "value": "state"
+              },
+              {
+                "type": "STRING",
+                "value": "formula"
+              },
+              {
+                "type": "STRING",
+                "value": "volname"
+              },
+              {
+                "type": "STRING",
+                "value": "values"
+              },
+              {
+                "type": "STRING",
+                "value": "version"
+              },
+              {
+                "type": "STRING",
+                "value": "for"
+              },
+              {
+                "type": "STRING",
+                "value": "model"
+              },
+              {
+                "type": "STRING",
+                "value": "finish"
+              },
+              {
+                "type": "STRING",
+                "value": "auxtype"
+              },
+              {
+                "type": "STRING",
+                "value": "auxvalue"
+              },
+              {
+                "type": "STRING",
+                "value": "auxunit"
+              }
+            ]
+          },
+          "named": true,
+          "value": "Name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_Eq"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "AttValue"
+          }
+        }
+      ]
+    },
     "_attribute": {
       "type": "CHOICE",
       "members": [
@@ -3928,6 +4179,10 @@
         {
           "type": "SYMBOL",
           "name": "value_attribute"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string_attribute"
         },
         {
           "type": "SYMBOL",
