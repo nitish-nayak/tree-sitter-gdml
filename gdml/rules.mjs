@@ -41,6 +41,12 @@ const solid_tags = ['box', 'cone', 'cutTube', 'elcone', 'ellipsoid', 'eltube', '
   'twistedtrd', 'twistedtubs', 'tube', 'union', 'subtraction', 'intersection', 'multiUnion',
   'scaledSolid', 'reflectedSolid'];
 
+// The Dimensions substitution group (gdml_parameterised.xsd): one per shape, used by <parameters>.
+const dimension_tags = ['box_dimensions', 'trd_dimensions', 'trap_dimensions', 'tube_dimensions',
+  'cone_dimensions', 'sphere_dimensions', 'orb_dimensions', 'torus_dimensions',
+  'ellipsoid_dimensions', 'para_dimensions', 'polycone_dimensions', 'polyhedra_dimensions',
+  'hype_dimensions'];
+
 // Ordered content models: each child slot is { one | opt | some | many : [allowed tags] }
 // in order (one = exactly 1, opt = 0-1, some = 1+, many = 0+); inline-or-ref via multi-tag lists.
 const gdml_ordered = {
@@ -56,6 +62,9 @@ const gdml_ordered = {
     { many: ['physvol', 'divisionvol', 'replicavol', 'paramvol', 'loop', 'auxiliary'] }],
   divisionvol: [{ one: ['volumeref'] }],
   replicavol: [{ one: ['volumeref'] }, { one: ['replicate_along_axis'] }],
+  paramvol: [{ one: ['volumeref'] }, { one: ['parameterised_position_size'] }],
+  parameterised_position_size: [{ some: ['parameters'] }],
+  parameters: [{ one: ['position'] }, { one: dimension_tags }],
   bordersurface: [{ one: ['physvolref'] }, { one: ['physvolref'] }],
   skinsurface: [{ one: ['volumeref'] }],
   structure: [{ many: ['volume', 'assembly', 'bordersurface', 'skinsurface', 'loop'] }],

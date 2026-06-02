@@ -1279,6 +1279,40 @@
     }
   },
   {
+    "type": "box_dimensions",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "call_expression",
     "named": true,
     "fields": {
@@ -1379,6 +1413,40 @@
   },
   {
     "type": "cone",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cone_dimensions",
     "named": true,
     "fields": {
       "name": {
@@ -1920,11 +1988,19 @@
           "named": true
         },
         {
+          "type": "box_dimensions",
+          "named": true
+        },
+        {
           "type": "composite",
           "named": true
         },
         {
           "type": "cone",
+          "named": true
+        },
+        {
+          "type": "cone_dimensions",
           "named": true
         },
         {
@@ -1961,6 +2037,10 @@
         },
         {
           "type": "ellipsoid",
+          "named": true
+        },
+        {
+          "type": "ellipsoid_dimensions",
           "named": true
         },
         {
@@ -2020,6 +2100,10 @@
           "named": true
         },
         {
+          "type": "hype_dimensions",
+          "named": true
+        },
+        {
           "type": "intersection",
           "named": true
         },
@@ -2068,7 +2152,15 @@
           "named": true
         },
         {
+          "type": "orb_dimensions",
+          "named": true
+        },
+        {
           "type": "para",
+          "named": true
+        },
+        {
+          "type": "para_dimensions",
           "named": true
         },
         {
@@ -2100,7 +2192,15 @@
           "named": true
         },
         {
+          "type": "polycone_dimensions",
+          "named": true
+        },
+        {
           "type": "polyhedra",
+          "named": true
+        },
+        {
+          "type": "polyhedra_dimensions",
           "named": true
         },
         {
@@ -2192,6 +2292,10 @@
           "named": true
         },
         {
+          "type": "sphere_dimensions",
+          "named": true
+        },
+        {
           "type": "structure",
           "named": true
         },
@@ -2212,11 +2316,23 @@
           "named": true
         },
         {
+          "type": "torus_dimensions",
+          "named": true
+        },
+        {
           "type": "trap",
           "named": true
         },
         {
+          "type": "trap_dimensions",
+          "named": true
+        },
+        {
           "type": "trd",
+          "named": true
+        },
+        {
+          "type": "trd_dimensions",
           "named": true
         },
         {
@@ -2225,6 +2341,10 @@
         },
         {
           "type": "tube",
+          "named": true
+        },
+        {
+          "type": "tube_dimensions",
           "named": true
         },
         {
@@ -2311,6 +2431,40 @@
   },
   {
     "type": "ellipsoid",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ellipsoid_dimensions",
     "named": true,
     "fields": {
       "name": {
@@ -2876,6 +3030,40 @@
   },
   {
     "type": "hype",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "hype_dimensions",
     "named": true,
     "fields": {
       "name": {
@@ -3731,7 +3919,75 @@
     }
   },
   {
+    "type": "orb_dimensions",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "para",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "para_dimensions",
     "named": true,
     "fields": {
       "name": {
@@ -3815,14 +4071,34 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "Attribute",
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "parameters",
           "named": true
         },
         {
@@ -3849,14 +4125,86 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "Attribute",
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "box_dimensions",
+          "named": true
+        },
+        {
+          "type": "cone_dimensions",
+          "named": true
+        },
+        {
+          "type": "ellipsoid_dimensions",
+          "named": true
+        },
+        {
+          "type": "hype_dimensions",
+          "named": true
+        },
+        {
+          "type": "orb_dimensions",
+          "named": true
+        },
+        {
+          "type": "para_dimensions",
+          "named": true
+        },
+        {
+          "type": "polycone_dimensions",
+          "named": true
+        },
+        {
+          "type": "polyhedra_dimensions",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "sphere_dimensions",
+          "named": true
+        },
+        {
+          "type": "torus_dimensions",
+          "named": true
+        },
+        {
+          "type": "trap_dimensions",
+          "named": true
+        },
+        {
+          "type": "trd_dimensions",
+          "named": true
+        },
+        {
+          "type": "tube_dimensions",
           "named": true
         },
         {
@@ -3883,18 +4231,42 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "Attribute",
           "named": true
         },
         {
-          "type": "content",
+          "type": "CDSect",
+          "named": true
+        },
+        {
+          "type": "CharData",
+          "named": true
+        },
+        {
+          "type": "Comment",
+          "named": true
+        },
+        {
+          "type": "PI",
+          "named": true
+        },
+        {
+          "type": "_Reference",
+          "named": true
+        },
+        {
+          "type": "parameterised_position_size",
           "named": true
         },
         {
           "type": "value_attribute",
+          "named": true
+        },
+        {
+          "type": "volumeref",
           "named": true
         }
       ]
@@ -4088,6 +4460,40 @@
     }
   },
   {
+    "type": "polycone_dimensions",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "polyhedra",
     "named": true,
     "fields": {
@@ -4136,6 +4542,40 @@
         },
         {
           "type": "zplane",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "polyhedra_dimensions",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
           "named": true
         }
       ]
@@ -5113,6 +5553,40 @@
     }
   },
   {
+    "type": "sphere_dimensions",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "structure",
     "named": true,
     "fields": {
@@ -5399,6 +5873,40 @@
     }
   },
   {
+    "type": "torus_dimensions",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "trap",
     "named": true,
     "fields": {
@@ -5433,7 +5941,75 @@
     }
   },
   {
+    "type": "trap_dimensions",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "trd",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "trd_dimensions",
     "named": true,
     "fields": {
       "name": {
@@ -5502,6 +6078,40 @@
   },
   {
     "type": "tube",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "Attribute",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tube_dimensions",
     "named": true,
     "fields": {
       "name": {
@@ -6483,11 +7093,19 @@
     "named": false
   },
   {
+    "type": "box_dimensions",
+    "named": false
+  },
+  {
     "type": "composite",
     "named": false
   },
   {
     "type": "cone",
+    "named": false
+  },
+  {
+    "type": "cone_dimensions",
     "named": false
   },
   {
@@ -6524,6 +7142,10 @@
   },
   {
     "type": "ellipsoid",
+    "named": false
+  },
+  {
+    "type": "ellipsoid_dimensions",
     "named": false
   },
   {
@@ -6580,6 +7202,10 @@
   },
   {
     "type": "hype",
+    "named": false
+  },
+  {
+    "type": "hype_dimensions",
     "named": false
   },
   {
@@ -6647,7 +7273,15 @@
     "named": false
   },
   {
+    "type": "orb_dimensions",
+    "named": false
+  },
+  {
     "type": "para",
+    "named": false
+  },
+  {
+    "type": "para_dimensions",
     "named": false
   },
   {
@@ -6679,7 +7313,15 @@
     "named": false
   },
   {
+    "type": "polycone_dimensions",
+    "named": false
+  },
+  {
     "type": "polyhedra",
+    "named": false
+  },
+  {
+    "type": "polyhedra_dimensions",
     "named": false
   },
   {
@@ -6775,6 +7417,10 @@
     "named": false
   },
   {
+    "type": "sphere_dimensions",
+    "named": false
+  },
+  {
     "type": "standalone",
     "named": false
   },
@@ -6799,11 +7445,23 @@
     "named": false
   },
   {
+    "type": "torus_dimensions",
+    "named": false
+  },
+  {
     "type": "trap",
     "named": false
   },
   {
+    "type": "trap_dimensions",
+    "named": false
+  },
+  {
     "type": "trd",
+    "named": false
+  },
+  {
+    "type": "trd_dimensions",
     "named": false
   },
   {
@@ -6812,6 +7470,10 @@
   },
   {
     "type": "tube",
+    "named": false
+  },
+  {
+    "type": "tube_dimensions",
     "named": false
   },
   {

@@ -47,6 +47,10 @@ static const char *const GDML_TAGS[] = {
     "divisionvol", "replicavol", "paramvol", "parameters", "parameterised_position_size",
     "replicate_along_axis", "direction", "directionref", "width", "offset",
     "bordersurface", "skinsurface", "loop", "auxiliary", "file", "world",
+    // parameterisation dimensions (Dimensions substitution group)
+    "box_dimensions", "trd_dimensions", "trap_dimensions", "tube_dimensions", "cone_dimensions",
+    "sphere_dimensions", "orb_dimensions", "torus_dimensions", "ellipsoid_dimensions",
+    "para_dimensions", "polycone_dimensions", "polyhedra_dimensions", "hype_dimensions",
 };
 static const size_t GDML_TAG_COUNT = sizeof(GDML_TAGS) / sizeof(GDML_TAGS[0]);
 

@@ -34,6 +34,10 @@ const GDML_TAGS = [
   'divisionvol', 'replicavol', 'paramvol', 'parameters', 'parameterised_position_size',
   'replicate_along_axis', 'direction', 'directionref', 'width', 'offset',
   'bordersurface', 'skinsurface', 'loop', 'auxiliary', 'file', 'world',
+  // parameterisation dimensions (Dimensions substitution group)
+  'box_dimensions', 'trd_dimensions', 'trap_dimensions', 'tube_dimensions', 'cone_dimensions',
+  'sphere_dimensions', 'orb_dimensions', 'torus_dimensions', 'ellipsoid_dimensions',
+  'para_dimensions', 'polycone_dimensions', 'polyhedra_dimensions', 'hype_dimensions',
 ];
 
 // <element> would clash with the inherited `element` rule, so its node is renamed (see rules.mjs).
