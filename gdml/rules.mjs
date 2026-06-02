@@ -143,13 +143,25 @@ function ref_tag($, tag) {
   return seq('<', $._gdml_open, tag, $._S, $._ref, optional($._S), '/>');
 }
 
-// default: <tag …/> or <tag>…</tag>, any children
+// fallback for an unclassified tag: <tag …/> or <tag>…</tag> with any children (permissive).
 function any_tag($, tag) {
   return choice(
     seq('<', $._gdml_open, tag, c.rseq($._S, $._attribute), optional($._S), '/>'),
     seq(
       seq('<', $._gdml_open, tag, c.rseq($._S, $._attribute), optional($._S), '>'),
       optional($.content),
+      seq('</', $._gdml_close, tag, optional($._S), '>'),
+    ),
+  );
+}
+
+// leaf element: <tag …/> or <tag …></tag> with only trivia/text inside — element children rejected.
+function leaf_tag($, tag) {
+  return choice(
+    seq('<', $._gdml_open, tag, c.rseq($._S, $._attribute), optional($._S), '/>'),
+    seq(
+      seq('<', $._gdml_open, tag, c.rseq($._S, $._attribute), optional($._S), '>'),
+      repeat($._misc),
       seq('</', $._gdml_close, tag, optional($._S), '>'),
     ),
   );
@@ -192,10 +204,22 @@ function gdml_container($, tag, children) {
   );
 }
 
+// Leaf elements: attribute-only or text-only in the schema — no element children (stray ones error).
+const leaf_tags = [
+  'constant', 'variable', 'quantity', 'expression', 'matrix', 'position', 'rotation', 'scale',
+  'atom', 'composite', 'fraction', 'D', 'T', 'P', 'MEE', 'RL', 'AL',
+  'box', 'cone', 'cutTube', 'elcone', 'ellipsoid', 'eltube', 'hype', 'orb', 'para', 'paraboloid',
+  'sphere', 'torus', 'trap', 'trd', 'tet', 'arb8', 'twistedbox', 'twistedtrap', 'twistedtrd',
+  'twistedtubs', 'tube', 'reflectedSolid', 'property', 'zplane', 'rzpoint', 'firstposition',
+  'firstrotation', 'section', 'twoDimVertex', 'triangular', 'quadrangular',
+  'direction', 'width', 'offset', 'file', ...dimension_tags,
+];
+
 // [predicate, builder] in priority order; first match wins, else any_tag.
 const templates = [
   [tag => /ref$/.test(tag), ref_tag],
   [tag => ['world', 'first', 'second', 'solid'].includes(tag), ref_tag],
+  [tag => leaf_tags.includes(tag), leaf_tag],
 ];
 
 // Body of one tag's rule; called as `$ => gdml_tag($, tag)`.
