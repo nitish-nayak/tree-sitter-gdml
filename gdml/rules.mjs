@@ -94,12 +94,15 @@ function gdml_complextype($, tag, content_model) {
   );
 }
 
-// restricted child set (any order)
+// restricted child set (any order); also self-closing when there are no children
 function gdml_restrictedtype($, tag, children) {
-  return seq(
-    seq('<', $._gdml_open, tag, c.rseq($._S, $._attribute), optional($._S), '>'),
-    repeat(choice(...children.map(t => $[node_renames[t] || t]), $._misc)),
-    seq('</', $._gdml_close, tag, optional($._S), '>'),
+  return choice(
+    seq('<', $._gdml_open, tag, c.rseq($._S, $._attribute), optional($._S), '/>'),
+    seq(
+      seq('<', $._gdml_open, tag, c.rseq($._S, $._attribute), optional($._S), '>'),
+      repeat(choice(...children.map(t => $[node_renames[t] || t]), $._misc)),
+      seq('</', $._gdml_close, tag, optional($._S), '>'),
+    ),
   );
 }
 
