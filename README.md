@@ -35,9 +35,10 @@ Those belong in whichever downstream tool makes use of the syntax tree.
 ## Caveats
 
 - `physvol` loosens one cardinality:
-    - schema `(volumeref|file), (position|positionref)?, (rotation|rotationref)?, (scale|scaleref)?` is relaxed to `(volumeref|file), (position|positionref)?, (rotation|rotationref)?, (scale|scaleref)*` (see `complexType` budget). volumeref-first and position-before-rotation still hold.
+    - schema `(volumeref|file), (position|positionref)?, (rotation|rotationref)?, (scale|scaleref)?` is relaxed to `(volumeref|file), (position|positionref)?, (rotation|rotationref)?, (scale|scaleref)*` (see `complexType` budget).
+    - volumeref-first and position-before-rotation still hold.
 - `complexType` budget — This is kept empirically to at-most 3 optional/choice slots. Beyond that the parser seems to have trouble with the combinatorics (it compiles, but doesn't parse correctly).
-  A few models (e.g. `replicate_along_axis`) fall back to a fully-unordered child set (internally `gdml_restrictedtype`).
+    - A few models (e.g. `replicate_along_axis`) fall back to a fully-unordered child set (internally `gdml_restrictedtype`).
 - Substitution groups (`Solid`, `Dimensions`, …) are closed choices of known members which can be extended in `gdml/schema.mjs` as the XSD schema grows.
 
 ## Layout
