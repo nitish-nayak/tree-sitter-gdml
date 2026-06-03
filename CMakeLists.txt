@@ -19,19 +19,19 @@ include(GNUInstallDirs)
 
 find_program(TREE_SITTER_CLI tree-sitter DOC "Tree-sitter CLI")
 
-add_custom_command(OUTPUT "${CMAKE_CURRENT_SOURCE_DIR}/src/parser.c"
-                   DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/grammar.json"
-                   COMMAND "${TREE_SITTER_CLI}" generate src/grammar.json
+add_custom_command(OUTPUT "${CMAKE_CURRENT_SOURCE_DIR}/gdml/src/parser.c"
+                   DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/gdml/src/grammar.json"
+                   COMMAND "${TREE_SITTER_CLI}" generate gdml/src/grammar.json
                             --abi=${TREE_SITTER_ABI_VERSION}
                    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
                    COMMENT "Generating parser.c")
 
-add_library(tree-sitter-gdml src/parser.c)
-if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/src/scanner.c)
-  target_sources(tree-sitter-gdml PRIVATE src/scanner.c)
+add_library(tree-sitter-gdml gdml/src/parser.c)
+if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/gdml/src/scanner.c)
+  target_sources(tree-sitter-gdml PRIVATE gdml/src/scanner.c)
 endif()
 target_include_directories(tree-sitter-gdml
-                           PRIVATE src
+                           PRIVATE gdml/src
                            INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/bindings/c>
                                      $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 

@@ -30,7 +30,7 @@ pub const LANGUAGE: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_gdml)
 /// The content of the [`node-types.json`] file for this grammar.
 ///
 /// [`node-types.json`]: https://tree-sitter.github.io/tree-sitter/using-parsers/6-static-node-types
-pub const NODE_TYPES: &str = include_str!("../../src/node-types.json");
+pub const NODE_TYPES: &str = include_str!("../../gdml/src/node-types.json");
 
 // NOTE: uncomment these to include any queries that this grammar contains:
 
