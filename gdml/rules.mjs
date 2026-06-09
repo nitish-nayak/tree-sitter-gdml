@@ -46,7 +46,7 @@ export const gdml_attr_rules = {
   // value-kind → expression, string-kind → raw AttValue
   value_attribute: $ => seq(alias(choice(...value_attrs), $.Name), $._Eq, field('value', $.gdml_value)),
   string_attribute: $ => seq(alias(choice(...string_attrs), $.Name), $._Eq, field('value', $.AttValue)),
-  _attribute: $ => choice($._name, $.value_attribute, $.string_attribute, $.Attribute),
+  _attribute: $ => choice($._name, $._ref, $.value_attribute, $.string_attribute, $.Attribute),
 
   _misc: $ => choice($.CharData, $.Comment, $.PI, $.CDSect, $._Reference),
 };

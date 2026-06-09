@@ -106,6 +106,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -278,6 +288,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -509,6 +529,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -655,6 +685,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -845,6 +885,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -969,6 +1019,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -1073,6 +1133,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -1119,6 +1189,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -1197,6 +1277,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -1243,6 +1333,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -1371,6 +1471,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -1429,6 +1539,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -1475,6 +1595,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -1602,6 +1732,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -1648,6 +1788,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -1710,6 +1860,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -1756,6 +1916,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -1876,6 +2046,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -1922,6 +2102,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -2016,6 +2206,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -2078,6 +2278,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -2206,6 +2416,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -2802,6 +3022,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -2848,6 +3078,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -2910,6 +3150,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -2964,6 +3214,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -3010,6 +3270,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -3088,6 +3358,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -3150,6 +3430,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -3228,6 +3518,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -3274,6 +3574,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -3348,6 +3658,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -3461,6 +3781,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -3511,6 +3841,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -3577,6 +3917,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -3631,6 +3981,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -3677,6 +4037,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -3779,6 +4149,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -3837,6 +4217,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -4043,6 +4433,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -4177,6 +4577,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -4247,6 +4657,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -4293,6 +4713,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -4351,6 +4781,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -4433,6 +4873,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -4479,6 +4929,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -4545,6 +5005,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -4591,6 +5061,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -4653,6 +5133,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -4699,6 +5189,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -4761,6 +5261,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -4807,6 +5317,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -4865,6 +5385,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -4983,6 +5513,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -5072,6 +5612,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -5182,6 +5732,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -5240,6 +5800,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -5286,6 +5856,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -5352,6 +5932,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -5398,6 +5988,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -5511,6 +6111,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -5557,6 +6167,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -5619,6 +6239,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -5673,6 +6303,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -5719,6 +6359,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -5813,6 +6463,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -5867,6 +6527,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -5945,6 +6615,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -5999,6 +6679,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -6045,6 +6735,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -6151,6 +6851,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -6197,6 +6907,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -6255,6 +6975,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -6345,6 +7075,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -6547,6 +7287,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -6593,6 +7343,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -6681,6 +7441,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -6747,6 +7517,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -6849,6 +7629,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -6911,6 +7701,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -6957,6 +7757,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -7019,6 +7829,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -7065,6 +7885,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -7127,6 +7957,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -7173,6 +8013,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -7235,6 +8085,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -7281,6 +8141,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -7343,6 +8213,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -7389,6 +8269,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -7451,6 +8341,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -7497,6 +8397,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -7559,6 +8469,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -7613,6 +8533,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -7659,6 +8589,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -7771,6 +8711,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -7865,6 +8815,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -7949,6 +8909,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -7995,6 +8965,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [
@@ -8105,6 +9085,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -8175,6 +9165,16 @@
             "named": true
           }
         ]
+      },
+      "ref": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -8229,6 +9229,16 @@
     "named": true,
     "fields": {
       "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "AttValue",
+            "named": true
+          }
+        ]
+      },
+      "ref": {
         "multiple": true,
         "required": false,
         "types": [

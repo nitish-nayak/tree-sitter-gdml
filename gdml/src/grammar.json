@@ -4178,6 +4178,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "_ref"
+        },
+        {
+          "type": "SYMBOL",
           "name": "value_attribute"
         },
         {
