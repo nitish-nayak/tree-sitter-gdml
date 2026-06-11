@@ -69,6 +69,13 @@ static void push_sentinel(Vector *tags) {
     array_push(tags, sentinel);
 }
 
+// Pop the top tag and free it, in two steps: the array.h macros may evaluate their
+// argument more than once, so array_delete(&array_pop(tags)) would pop repeatedly.
+static inline void pop_and_delete(Vector *tags) {
+    String top = array_pop(tags);
+    array_delete(&top);
+}
+
 static String scan_tag_name(TSLexer *lexer) {
     String tag_name = array_new();
     if (is_valid_name_start_char(lexer->lookahead)) {
@@ -116,7 +123,7 @@ static bool scan_end_tag_name(Vector *tags, TSLexer *lexer, const bool *valid_sy
     if (valid_symbols[GDML_CLOSE] && is_gdml_tag(&tag_name)) {
         array_delete(&tag_name);
         if (tags->size > 0 && is_sentinel(array_back(tags))) {
-            array_delete(&array_pop(tags));
+            pop_and_delete(tags);
         }
         lexer->result_symbol = GDML_CLOSE;
         return true;
@@ -124,7 +131,7 @@ static bool scan_end_tag_name(Vector *tags, TSLexer *lexer, const bool *valid_sy
 
     lexer->mark_end(lexer);
     if (tags->size > 0 && string_eq(array_back(tags), &tag_name)) {
-        array_delete(&array_pop(tags));
+        pop_and_delete(tags);
         lexer->result_symbol = END_TAG_NAME;
     } else {
         lexer->result_symbol = ERRONEOUS_END_NAME;
@@ -138,7 +145,7 @@ static bool scan_self_closing_tag_delimiter(Vector *tags, TSLexer *lexer) {
     advance_if_eq(lexer, '>');
     // Pops the sentinel of a GDML empty-element, or the name of a generic one.
     if (tags->size > 0) {
-        array_delete(&array_pop(tags));
+        pop_and_delete(tags);
         lexer->result_symbol = SELF_CLOSING_TAG_DELIMITER;
     }
     return true;
